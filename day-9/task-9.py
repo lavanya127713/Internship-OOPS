@@ -1,0 +1,19 @@
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+    def __gt__(self, other):
+        return self.salary > other.salary
+
+    def __lt__(self, other):
+        return self.salary < other.salary
+
+
+# Creating objects
+e1 = Employee("Alice", 50000)
+e2 = Employee("Bob", 60000)
+
+# Comparing employees
+print(e1 > e2)
+print(e1 < e2)
